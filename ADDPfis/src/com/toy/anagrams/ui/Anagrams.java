@@ -146,7 +146,7 @@ public class Anagrams extends JFrame {
 
         guessLabel.setDisplayedMnemonic('Y');
         guessLabel.setLabelFor(guessedWord);
-        guessLabel.setText("Tu invitado:");
+        guessLabel.setText("Respuesta");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
@@ -173,7 +173,7 @@ public class Anagrams extends JFrame {
         buttonsPanel.setLayout(new java.awt.GridBagLayout());
 
         guessButton.setMnemonic('G');
-        guessButton.setText("Guess");
+        guessButton.setText("Validar");
         guessButton.setToolTipText("Guess the scrambled word.");
         guessButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,8 +189,9 @@ public class Anagrams extends JFrame {
         buttonsPanel.add(guessButton, gridBagConstraints);
 
         nextTrial.setMnemonic('N');
-        nextTrial.setText("New Word");
+        nextTrial.setText("Nueva palabra");
         nextTrial.setToolTipText("Fetch a new word.");
+        nextTrial.setActionCommand("Nueva Palabra");
         nextTrial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextTrialActionPerformed(evt);
